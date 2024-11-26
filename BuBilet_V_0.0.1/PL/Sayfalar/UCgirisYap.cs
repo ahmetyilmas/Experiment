@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BuBilet_V_0._0._1
+namespace BuBilet_V_0._0._1.Sayfalar
 {
-    public partial class BuBilet : Form
+    public partial class UCgirisYap : UserControl
     {
-        public BuBilet()
+        public UCgirisYap()
         {
             InitializeComponent();
         }

@@ -16,7 +16,7 @@ namespace BuBilet_V_0._0._1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BuBilet());
+            Application.Run(new FrmBuBilet());
         }
     }
 }
