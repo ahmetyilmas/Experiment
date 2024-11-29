@@ -91,6 +91,26 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="ProjeDenemesiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjeDenemesiDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjeDenemesiDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjeDenemesiDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjeDenemesiDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjeDenemesiDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjeDenemesiDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjeDenemesiDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PL\Sayfalar\UCbiletKontrol.cs">
       <SubType>UserControl</SubType>
@@ -151,6 +171,50 @@
       <DependentUpon>UCucakBiletleri.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="ProjeDenemesiDataSet.xsc">
+      <DependentUpon>ProjeDenemesiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProjeDenemesiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjeDenemesiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjeDenemesiDataSet.xss">
+      <DependentUpon>ProjeDenemesiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProjeDenemesiDataSet1.xsc">
+      <DependentUpon>ProjeDenemesiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ProjeDenemesiDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjeDenemesiDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjeDenemesiDataSet1.xss">
+      <DependentUpon>ProjeDenemesiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ProjeDenemesiDataSet2.xsc">
+      <DependentUpon>ProjeDenemesiDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ProjeDenemesiDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjeDenemesiDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjeDenemesiDataSet2.xss">
+      <DependentUpon>ProjeDenemesiDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ProjeDenemesiDataSet3.xsc">
+      <DependentUpon>ProjeDenemesiDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ProjeDenemesiDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjeDenemesiDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjeDenemesiDataSet3.xss">
+      <DependentUpon>ProjeDenemesiDataSet3.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

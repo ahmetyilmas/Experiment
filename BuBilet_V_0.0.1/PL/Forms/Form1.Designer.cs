@@ -49,10 +49,13 @@
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.TmrSideBarTransition = new System.Windows.Forms.Timer(this.components);
             this.PnlAnaPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.PnlSidebar.SuspendLayout();
             this.PnlSidebarTop.SuspendLayout();
             this.PnlSidebarBottom.SuspendLayout();
             this.PnlNavbar.SuspendLayout();
+            this.PnlAnaPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // PnlSidebar
@@ -363,12 +366,23 @@
             // 
             // PnlAnaPanel
             // 
+            this.PnlAnaPanel.Controls.Add(this.dataGridView1);
             this.PnlAnaPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PnlAnaPanel.Location = new System.Drawing.Point(265, 58);
             this.PnlAnaPanel.Name = "PnlAnaPanel";
             this.PnlAnaPanel.Size = new System.Drawing.Size(1654, 961);
             this.PnlAnaPanel.TabIndex = 2;
             this.PnlAnaPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlAnaPanel_Paint);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(280, 45);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(488, 210);
+            this.dataGridView1.TabIndex = 0;
             // 
             // FrmBuBilet
             // 
@@ -390,6 +404,8 @@
             this.PnlSidebarBottom.ResumeLayout(false);
             this.PnlNavbar.ResumeLayout(false);
             this.PnlNavbar.PerformLayout();
+            this.PnlAnaPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -415,6 +431,7 @@
         private System.Windows.Forms.Timer TmrSideBarTransition;
         private Guna.UI2.WinForms.Guna2Panel PnlAnaPanel;
         private System.Windows.Forms.Label LblTitle;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

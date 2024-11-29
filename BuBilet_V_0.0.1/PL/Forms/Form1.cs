@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
+
 
 namespace BuBilet_V_0._0._1
 {
@@ -22,7 +24,26 @@ namespace BuBilet_V_0._0._1
             this.Location = workingArea.Location;
 
             this.StartPosition = FormStartPosition.Manual;
+
+            NpgsqlConnection baglanti = new NpgsqlConnection("Server = localhost; Port = 5432; Database = ProjeDenemesi; User ID = postgres; password = ahmet1234");
+            baglanti.Open();
+            NpgsqlCommand comm = new NpgsqlCommand();
+            comm.Connection = baglanti;
+            comm.CommandType = CommandType.Text;
+            comm.CommandText = "SELECT * FROM OtobusSeferleri";
+            NpgsqlDataReader dr = comm.ExecuteReader();
+            if (dr.HasRows)
+            {
+                DataTable dt = new DataTable();
+                dt.Load(dr);
+                dataGridView1.DataSource = dt;
+            }
+
+            comm.Dispose();
+            baglanti.Close();
         }
+
+        
 
         public void panelEkle(UserControl sayfalar)
         {
@@ -87,7 +108,7 @@ namespace BuBilet_V_0._0._1
 
         private void BtnGirisYap_Click(object sender, EventArgs e)
         {
-            UCgirisYap girisYapmaSayfasi = new UCgirisYap();
+            UCgirisYapPanel girisYapmaSayfasi = new UCgirisYapPanel();
             panelEkle(girisYapmaSayfasi);
         }
 
