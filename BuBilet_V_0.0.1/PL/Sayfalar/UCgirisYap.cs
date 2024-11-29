@@ -37,16 +37,16 @@ namespace BuBilet_V_0._0._1.Sayfalar
             using (NpgsqlConnection baglanti = new NpgsqlConnection("Server = localhost; Port = 5432; Database = ProjeDenemesi; User ID = postgres; password = ahmet1234"))
             {
                 baglanti.Open();
-                using (NpgsqlCommand comm = new NpgsqlCommand("SELECT kullaniciSifre FROM Kullanicilar WHERE kullaniciAdi = @kullaniciAdi", baglanti))
+                using (NpgsqlCommand comm = new NpgsqlCommand("SELECT kullaniciSifre FROM Kullanicilar WHERE kullaniciID = @kullaniciAdi", baglanti))
                 {
                     comm.Parameters.AddWithValue("@kullaniciAdi", kullaniciAdi);
 
                     using (NpgsqlDataReader dr = comm.ExecuteReader())
                     {
-                        if (dr.HasRows)
+                        
+
+                        if (dr.Read())
                         {
-                            DataTable dt = new DataTable();
-                            dt.Load(dr);
                             string DBsifre = dr["kullaniciSifre"].ToString();
                             if(sifre == DBsifre)
                                 return true;
